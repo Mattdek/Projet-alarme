@@ -1,4 +1,4 @@
 # Projet-alarme
 test
-coucou
+La première étape a été de coder le deteceur de mouvement 
 
