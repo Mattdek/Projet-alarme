@@ -193,6 +193,7 @@ void intrusionAlert() {
       display.setTextSize(1);
       display.setCursor(5, 25);
       display.println("Tentative");
+      Serial.println("Code Faux");
       display.setCursor(10, 50);
       display.println("d'intrusion");
     }
