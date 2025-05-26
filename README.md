@@ -270,7 +270,7 @@ void loop() {
 
 
 
-Ensuite nous avons travaillé sur le codage de l'écran oled qui affiche principalement code bon ou faux lorsque on effectue le code via le bouton grace a ce code :
+ENSUITE, NOUS AVONS TRAVAILLÉ SUR LE CODAGE DE L'ÉCRAN OLED QUI AFFICHE PRINCIPALEMENT "CODE BON" OU "CODE FAUX" LORSQUE L'ON EFFECTUE LE CODE VIA LE BOUTON GRÂCE À CE CODE :
 
 
 
@@ -451,7 +451,7 @@ void intrusionAlert() {
   }
 }
 
-Nous avons ensuite travaillé sur le codage des leds les parametrer pour qu'ils s'allume en vert lorsque le code est bon et en rouge lorsque c'est mauvais :
+NOUS AVONS ENSUITE TRAVAILLÉ SUR LE CODAGE DES LEDS, LES PARAMÉTRER POUR QU'ELLES S'ALLUMENT EN VERT LORSQUE LE CODE EST BON ET EN ROUGE LORSQUE C'EST MAUVAIS :
 
 
 #include <Adafruit_GFX.h>
@@ -659,4 +659,61 @@ void intrusionAlert() {
 } 
 
 
+AINSI QUE CE CODE LA : 
 
+
+#include <Wire.h>
+#include <FastLED.h>
+
+#define LED_PIN     4
+#define NUM_LEDS    21
+#define BRIGHTNESS  32
+#define LED_TYPE    WS2812
+#define COLOR_ORDER GRB
+#define UPDATES_PER_SECOND 100
+
+#define PIR_OUT     A3
+#define PIR_POWER   A2
+
+CRGB leds[NUM_LEDS];
+
+// Durée pendant laquelle les LEDs restent rouges après détection (en millisecondes)
+const unsigned long presenceDuration = 2000;
+unsigned long lastDetectionTime = 0;
+
+void setColor(int redValue, int blueValue, int greenValue) {
+  fill_solid(leds, NUM_LEDS, CRGB(greenValue, redValue, blueValue));
+  FastLED.show();
+}
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(PIR_POWER, OUTPUT);
+  pinMode(PIR_OUT, INPUT);
+
+  digitalWrite(PIR_POWER, HIGH);  // Alimente le capteur PIR
+
+  FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS)
+         .setCorrection(TypicalLEDStrip);
+  FastLED.setBrightness(BRIGHTNESS);
+
+  setColor(255, 0, 0);  // LEDs vertes au démarrage
+}
+
+void loop() {
+  bool presence = digitalRead(PIR_OUT);
+
+  if (presence) {
+    Serial.println("Présence détectée !");
+    lastDetectionTime = millis();  // Mémorise le moment de la détection
+  }
+
+  if (millis() - lastDetectionTime < presenceDuration) {
+    // Affiche rouge pendant la durée spécifiée après détection
+    setColor(0, 0, 255);  // Rouge
+  } else {
+    setColor(255, 0, 0);  // Vert
+  }
+
+  delay(100);
+}
