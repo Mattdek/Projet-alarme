@@ -1,4 +1,4 @@
-# Projet-alarme
+# ALARME SILENCIEUX
 BIENVENUE sur notre README ceci est un tuto pour pouvoir tester notre projet
 # MATERIEL
 Pour pouvoir tester il vous faut :<br/>
