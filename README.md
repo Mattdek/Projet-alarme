@@ -63,7 +63,7 @@ Maintenant que nous avons tous nos composants branché vous pouvez connecter la 
  Pour pouvoir installer il faut faire Sketch > Include Library > puis mettre celui qui nous interesse
 
 ## PYTHON
-
+### Comme nous avons ni Bluetooth ni Wifi sur cette carte on utiliseras le wifi de l'ordinateur pour envoyer un mail via SMTP
 Etape 1: Telecharger Python
 
 Etape 2:ouvrir l'invite de commande(CMD) et installer les bibliothèques nécessaires :
