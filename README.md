@@ -4,7 +4,7 @@ BIENVENUE sur notre README ceci est un tuto pour pouvoir tester notre projet
 Pour pouvoir tester il vous faut :<br/>
 -un capteur PIR <br/>
 -un écran OLED <br/>
-https://github.com/Mattdek/Projet-alarme?tab=readme-ov-file#les-branchements
+
 # LA CONFIGURATION
 
 D'abors telecharger Arduino IDE(au moins la version v1.6.8) sur votre ordinateur puis brancher la carte RFThings sur l'un des ports si la 
