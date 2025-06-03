@@ -115,7 +115,7 @@ Donc faut faire
 ![IMG_7685](https://github.com/user-attachments/assets/4dcd24dd-8971-44bf-be95-72bec52d2f61)
 
 # EXPLICATION DU CODE 
-## [ARDUINO]() // [PYTHON]()
+## [ARDUINO](https://github.com/Mattdek/Projet-alarme/blob/main/README.md#explication-du-code) // [PYTHON](https://github.com/Mattdek/Projet-alarme/blob/main/README.md#python-1)
 ### Ce bloc de code ci-dessous permet d'importer les bibliotheques nécessaire
 
 https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067ab4b5a/oled_sensor_btn.ino#L1-L3
