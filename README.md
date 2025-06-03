@@ -1,5 +1,11 @@
 # ALARME SILENCIEUX
 BIENVENUE sur notre README ceci est un tuto pour pouvoir tester notre projet
+
+# SOMMAIRE
+
+### [BRANCHEMENT ET FONCTIONNEMENT](https://github.com/Mattdek/Projet-alarme/blob/main/README.md#materiel)
+### [EXPLICATION CODE](https://github.com/Mattdek/Projet-alarme/blob/main/README.md#code-arduino)
+
 # MATERIEL
 Pour pouvoir tester il vous faut :<br/>
 -un capteur PIR <br/>
@@ -8,7 +14,7 @@ Pour pouvoir tester il vous faut :<br/>
 # LA CONFIGURATION
 
 D'abors telecharger Arduino IDE(au moins la version v1.6.8) sur votre ordinateur puis brancher la carte RFThings sur l'un des ports si la 
-carte se reconnait PARFAIT vous pouvez passer à l'etape 2 sinon aller sur ce [lien](https://github.com/FabienFerrero/UCA21?tab=readme-ov-file#board-programming---board-manager) et suivez le tuto.
+carte se reconnait **PARFAIT** vous pouvez passer à l'etape 2 sinon aller sur ce [lien](https://github.com/FabienFerrero/UCA21?tab=readme-ov-file#board-programming---board-manager) et suivez le tuto.
 
 # LES BRANCHEMENTS
 
@@ -108,4 +114,42 @@ Donc faut faire
 
 ![IMG_7685](https://github.com/user-attachments/assets/4dcd24dd-8971-44bf-be95-72bec52d2f61)
 
+# EXPLICATION DU CODE 
+## [ARDUINO]() // [PYTHON]()
+### Ce bloc de code ci-dessous permet d'importer les bibliotheques nécessaire
 
+https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067ab4b5a/oled_sensor_btn.ino#L1-L3
+
+### Puis on initialise nos compasants 
+
+https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067ab4b5a/oled_sensor_btn.ino#L5-L42
+
+### Le capteur PIR se reactiver pret à detecter les mouvements (se reactive pour creer une boucle à la fin)
+
+https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067ab4b5a/oled_sensor_btn.ino#L45-L50
+
+### Initialise les tentatives à 0 et desactive le capteur PIR pendant 10sec 
+
+https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067ab4b5a/oled_sensor_btn.ino#L53-L65
+
+### Si quelqu'un passe sans mettre le code la carte va envoyer "Présence détectée !" dans la console 
+
+https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067ab4b5a/oled_sensor_btn.ino#L68-L78
+
+### On lit les bouton et on configure le code 
+
+https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067ab4b5a/oled_sensor_btn.ino#L81-L140
+
+### Si il y a plus de 3 tentatives il lance l'alerte intrution 
+
+https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067ab4b5a/oled_sensor_btn.ino#L143-L151
+
+### Voici l'alerte intrutuion 
+
+https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067ab4b5a/oled_sensor_btn.ino#L186-L204
+
+### Se reset pour faire la boucle 
+
+https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067ab4b5a/oled_sensor_btn.ino#L153-L184
+
+## PYTHON
