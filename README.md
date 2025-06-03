@@ -58,7 +58,7 @@ Maintenant que nous avons tous nos composants branché vous pouvez connecter la 
 
    Faites televerser
    
-   Si cela ne marche pas c'est qu'il faut que vous installer les librairie qu'on utilise donc :<br/>
+   Si cela ne marche pas c'est qu'il faut que vous installer les bibliothèques qu'on utilise donc :<br/>
      -Adafruit_GFX.h<br/>
      -Adafruit_SSD1306.h<br/>
 
