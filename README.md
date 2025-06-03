@@ -4,7 +4,7 @@ BIENVENUE sur notre README ceci est un tuto pour pouvoir tester notre projet
 # SOMMAIRE
 
 ### [BRANCHEMENT ET FONCTIONNEMENT](https://github.com/Mattdek/Projet-alarme/blob/main/README.md#materiel)
-### [EXPLICATION CODE](https://github.com/Mattdek/Projet-alarme/blob/main/README.md#code-arduino)
+### [EXPLICATION CODE](https://github.com/Mattdek/Projet-alarme/blob/main/README.md#explication-du-code)
 
 # MATERIEL
 Pour pouvoir tester il vous faut :<br/>
