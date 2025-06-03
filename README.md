@@ -153,3 +153,15 @@ https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067
 https://github.com/Mattdek/Projet-alarme/blob/16c9cb513701ec9fecbdc7c88554dc8067ab4b5a/oled_sensor_btn.ino#L153-L184
 
 ## PYTHON
+
+### On a d'abord initialiser avec les importation de bibliotheques et les mails des personnes à prevenir et des messages
+
+https://github.com/Mattdek/Projet-alarme/blob/62cfbd8681e0a96ad8ea51b6d9fd73434eb8e2e6/alarme_presence.py#L1-L24
+
+### Pour eviter que des bugs arrive ou memes des boucles infini nous avons pris une securité avec le ecxept qui arrive par exemple quand le COM3 est occupé et l'envoie de mail par rapport au message que la carte envoye 
+
+https://github.com/Mattdek/Projet-alarme/blob/62cfbd8681e0a96ad8ea51b6d9fd73434eb8e2e6/alarme_presence.py#L49-L77
+
+### La fonction qui envoye le mail 
+
+https://github.com/Mattdek/Projet-alarme/blob/62cfbd8681e0a96ad8ea51b6d9fd73434eb8e2e6/alarme_presence.py#L27-L46
