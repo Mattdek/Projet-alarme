@@ -56,6 +56,8 @@ Maintenant que nous avons tous nos composants branché vous pouvez connecter la 
 
    https://github.com/Mattdek/Projet-alarme/blob/db9e4c2a9641eba62687088eb3b9fb727a06c42d/oled_sensor_btn.ino#L1-L204
 
+   Faites televerser
+   
    Si cela ne marche pas c'est qu'il faut que vous installer les librairie qu'on utilise donc :<br/>
      -Adafruit_GFX.h<br/>
      -Adafruit_SSD1306.h<br/>
@@ -85,9 +87,13 @@ Donc faut faire
 
     cd Utilisateurs/job/Musique/U Roy-Natty Rebel
   
-  PUIS
+  Verifier bien que la console arduino(moniteur de serie) est fermée ou vous pouvez fermer completement arduino
+
+  Puis faite ceci 
 
     python alarme_presence.py
+  
+ 
 # FONCTIONNEMENT
 ### Voici où se situe notre bouton 
 ![board](https://github.com/user-attachments/assets/bca35b1a-089e-4148-b956-e36560219e1a)
